@@ -16,6 +16,7 @@ Freebase is huge! You need a machine that has around 300GB RAM. If you don't to 
 * Download Freebase dump from [https://developers.google.com/freebase/](https://developers.google.com/freebase/)
 * Create a folder for database: `mkdir db && mv freebase-rdf-* db`, unzip the dump: `cd db && gunzip freebase-rdf-*`
 * Copy the default configuration file for the database folder: 'cp /etc/virtuoso-opensource-6.1/virtuoso.ini .'
+* Modify `virtuoso.ini` to increase the buffer size according to your system memory
 * Run a virtuoso server: `virtuoso-t -f`, make sure you are in the database folder that has `virtuoso.ini`
 * Run a client: `isql-vt`
   * add the dump path: `SQL> ld_dir('.', 'freebase-rdf-*', 'http://freebase.com');`
